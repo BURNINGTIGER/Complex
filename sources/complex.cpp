@@ -56,7 +56,7 @@ Complex Complex::operator*(Complex &c2)
 	return res;
 }
 
-Complex Complex::operator/(Complex &copy)
+Complex Complex::operator/(Complex &c2)
 {
 	Complex res;
 	res.rel = ((rel * c2.real)+(img*c2.img))/((c2.rel*c2.rel)+(c2.img*c2.img));
@@ -114,8 +114,8 @@ Complex res;
 }
 
 
-ostream& operator <<(ostream& res, Complex& c2
-){
+ostream& operator <<(ostream& res, Complex& c2)
+{
 		res << c2.rel << " + " << c2.img << "*i" << endl;
 }
 
