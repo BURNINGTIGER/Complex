@@ -24,7 +24,9 @@ class Complex
 	Complex operator*=(Complex&);
 	Complex operator/=(Complex&);
 	friend ostream& operator<<(ostream&, Complex&);
-	friend istream& operator>>(istream&, Complex &);;
+	friend istream& operator>>(istream&, Complex &);
+	double real();
+	double imag();
 	
 
 };
