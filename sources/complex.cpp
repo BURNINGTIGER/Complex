@@ -66,9 +66,9 @@ Complex Complex::operator/(Complex &c2)
 
 bool Complex::operator==(Complex &cc)
 {
-	bool r=false;
-	if ((rel == cc.rel) && (img == cc.img))
-		r=true;
+	bool r=true;
+	if ((rel != cc.rel) || (img != cc.img))
+		r=false;
 	return r;
 }
 
