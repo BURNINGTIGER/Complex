@@ -45,13 +45,13 @@ double Complex::imag()
 Complex::Complex(const Complex& cc)
 {
 	rel = cc.rel;
-	img = cc.imag;
+	img = cc.img;
 }
 
 Complex Complex::operator*(Complex &c2) 
 {
 	Complex res;
-	res.rel = ((rel * c2.real)-(img*c2.img));
+	res.rel = ((rel * c2.rel)-(img*c2.img));
 	res.img = ((img * c2.rel)+(rel*c2.img));
 	return res;
 }
@@ -59,7 +59,7 @@ Complex Complex::operator*(Complex &c2)
 Complex Complex::operator/(Complex &c2)
 {
 	Complex res;
-	res.rel = ((rel * c2.real)+(img*c2.img))/((c2.rel*c2.rel)+(c2.img*c2.img));
+	res.rel = ((rel * c2.rel)+(img*c2.img))/((c2.rel*c2.rel)+(c2.img*c2.img));
 	res.img = ((img * c2.rel)-(rel*c2.img))/((c2.rel*c2.rel)+(c2.img*c2.img));
 	return res;
 }
@@ -96,7 +96,7 @@ Complex Complex::operator-=(Complex &c2)
 Complex Complex::operator*=(Complex &c2)
 {
  Complexres;
-	res.rel = ((rel * c2.real)-(img*c2.img));
+	res.rel = ((rel * c2.rel)-(img*c2.img));
 	res.img = ((img * c2.rel)+(rel*c2.img));
   rel=res.rel;
   img=res.img;
@@ -106,7 +106,7 @@ Complex Complex::operator*=(Complex &c2)
 Complex Complex::operator/=(Complex &copy)
 {
 Complex res;
-	res.rel = ((rel * c2.real)+(img*c2.img))/((c2.rel*c2.rel)+(c2.img*c2.img));
+	res.rel = ((rel * c2.rel)+(img*c2.img))/((c2.rel*c2.rel)+(c2.img*c2.img));
 	res.img = ((img * c2.rel)-(rel*c2.img))/((c2.rel*c2.rel)+(c2.img*c2.img));
   rel=res.rel;
   img=res.img;
